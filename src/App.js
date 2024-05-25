@@ -8,6 +8,8 @@ import Logout from './pages/Logout';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Header from './components/Header';
+import ProtectedRoute from './components/ProtectedRoute';
+import Login from './pages/Login';
 
 function App() {
   return (
@@ -15,12 +17,17 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path='/' element={<Products />} />
-          <Route path='/add' element={<AddProduct />} />
-          <Route path='/update' element={<UpdateProduct />} />
-          <Route path='/logout' element={<Logout />} />
-          <Route path='/profile' element={<Profile />} />
+
+          <Route element={<ProtectedRoute />}>
+            <Route path='/' element={<Products />} />
+            <Route path='/add' element={<AddProduct />} />
+            <Route path='/update' element={<UpdateProduct />} />
+            <Route path='/logout' element={<Logout />} />
+            <Route path='/profile' element={<Profile />} />
+          </Route>
+
           <Route path='/signup' element={<Signup />} />
+          <Route path='/login' element={<Login />} />
         </Routes>
       </Router>
     </div>

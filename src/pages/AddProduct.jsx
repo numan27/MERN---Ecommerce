@@ -1,8 +1,11 @@
 import React from 'react'
+import AddProduct from '../components/AddProduct'
 
 const AddProducts = () => {
   return (
-    <div>Add Products</div>
+    <div className=''>
+     <AddProduct />
+    </div>
   )
 }
 

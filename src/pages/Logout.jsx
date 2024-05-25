@@ -2,7 +2,9 @@ import React from 'react'
 
 const Logout = () => {
   return (
-    <div>Logout</div>
+    <div className='d-flex align-items-center justify-content-center min-vh-100'>
+    <h1>Logout</h1>
+  </div>
   )
 }
 
